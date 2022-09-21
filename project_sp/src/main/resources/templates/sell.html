@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html  xmlns:th="http//www.thymeleaf.org" >
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Sell</title>
+<style type="text/css">
+    label {
+        display: inline-block;
+        width:200px;
+        margin: auto;
+        text-align: left;
+    }
+    button{
+        margin: 10px;
+        padding: 10px;
+    }
+</style>
+</head>
+<body>
+<div align="center">
+<h1>Sell</h1>
+<form action="#" th:action="@{/sell}" th:object="${sell_class}" method="post">
+    <label>id:</label>
+    <input type="text" th:field="${sell_class.id}" /><br/>
+
+    <label>name:</label>
+<input type="text" th:field="${sell_class.name}" /><br/>
+    <label>pirson_name</label>
+    <input type="text" th:field="${sell_class.pirson_name}"/><br/>
+    <label>date</label>
+    <input type="text" th:field="${sell_class.date}"/><br/>
+
+    <button type="submit ">Regeister</button>
+</form>
+</div>
+</body>
+</html>

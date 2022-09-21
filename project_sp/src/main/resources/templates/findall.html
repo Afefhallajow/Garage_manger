@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.thymeleaf.org ">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Find all</title>
+    <style type="text/css">
+        label {
+            display: inline-block;
+            width:200px;
+            margin: auto;
+            text-align: left;
+        }
+        button{
+            margin: 100px;
+            padding: 100px;
+        }
+    </style>
+
+</head>
+<body>
+<ol>
+    <div>
+<li th:each="cars : ${ cars }">
+    <h3>selead</h3>
+    <span th:text="${cars.is_sealed}"></span>
+    <h3>name</h3>
+    <h3>id</h3>
+    <span th:text="${cars.id}"></span>
+    <h3>name</h3>
+    <span th:text="${cars.name}"></span>
+    <h3>NumberOfSeats</h3>
+    <span th:text="${cars.numberOfSeats}"></span>
+    <h3>date</h3>
+    <span th:text="${cars.date}">Default</span>
+    <h3>price</h3>
+    <span th:text="${cars.price}">Default</span>
+    <h3>persson name</h3>
+    <span th:text="${cars.personname}"></span>
+    </li>
+    </div>
+
+</ol>
+
+</body>
+</html>
